@@ -73,6 +73,27 @@ export const constantRoutes = [
   {
     path: '/',
     component: Layout,
+    redirect: '/tools',
+    meta: { icon: 'el-icon-s-tools' },
+
+    children: [
+      {
+        path: 'tools',
+        component: () => import('@/views/tools/index'),
+        name: 'tools',
+        meta: { title: 'tools', icon: 'el-icon-s-tools' }
+      }, {
+        path: 'split-text-with-quote',
+        component: () => import('@/views/tools/split-text-with-quote'),
+        name: 'tools',
+        meta: { title: 'split-text-with-quote', icon: 'el-icon-s-tools' }
+      }
+    ]
+
+  },
+  {
+    path: '/dashboard',
+    component: Layout,
     redirect: '/dashboard',
     children: [
       {

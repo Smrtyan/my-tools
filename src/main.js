@@ -18,7 +18,13 @@ import './icons' // icon
 import './permission' // permission control
 import './utils/error-log' // error log
 
-import * as filters from './filters' // global filters
+import * as filters from './filters' // global filter
+/**
+ * copy text plugin
+ */
+import VueClipBoard from 'vue-clipboard2'
+
+Vue.use(VueClipBoard)
 
 /**
  * If you don't want to use mock-server
